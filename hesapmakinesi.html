@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hesap Makinesi</title>
+	<style>
+		input[type="button"] {
+			width: 100px;
+			height: 60px;
+			margin: 10px;
+			font-size: 22px;
+			background-color:orange;
+		}
+
+		input[type="text"] {
+			width: 500px;
+			height: 80px;
+			margin: 10px;
+			font-size: 26px;
+			border: 2px solid;
+			padding: 2px;
+		}
+
+		input[type="button"]:hover {
+			background-color: black;
+			color: white;
+			cursor:pointer;
+		}
+		h2{margin-left: 115px;
+		margin-top: 55px;
+		font-size: 32px;
+		word-spacing: 10px;}
+
+	</style>
+</head>
+
+<body>
+	<h2><i>Basit Hesap Makinesi</i></h2>
+	<input type="text" id="textbox1" placeholder="sayı 1" required><br>
+	<input type="text" id="textbox2" placeholder="sayı 2" required><br>
+	<input type="button" id="buttonadd" value="+" onclick="topla()">
+	<input type="button" id="buttonasub" value="-" onclick=" cikar()">
+	<input type="button" id="buttonamul" value="*" onclick="carp()">
+	<input type="button" id="buttondiv" value="/" onclick="bol()"><br>
+	<input type="text" id="sonuc" placeholder="sonuç" required><br>
+	<script type="text/javascript">
+		function topla() {
+			s1 = document.getElementById("textbox1").value; //textboxa verilen id değeri yardımıyla ordaki değer alınıyor  
+			s2 = document.getElementById("textbox2").value;
+			sonuc.value = parseInt(s1) + parseInt(s2);
+		}
+		//değerler var tipindedir,onlara işlem yaptırtmak için int çevirmek gerekiyor}
+		function cikar() {
+			s1 = document.getElementById("textbox1").value;
+			s2 = document.getElementById("textbox2").value;
+			sonuc.value = parseInt(s1) - parseInt(s2);
+		}
+
+		function carp() {
+			s1 = document.getElementById("textbox1").value;
+			s2 = document.getElementById("textbox2").value;
+			sonuc.value = parseInt(s1) * parseInt(s2);
+		}
+
+		function bol() {
+			s1 = document.getElementById("textbox1").value;
+			s2 = document.getElementById("textbox2").value;
+			if (s2 == 0)
+				alert("sayı 0 a bölünürse tanımsız olur.Lütfen sayıyı değiştir")
+			else sonuc.value = parseInt(s1) / parseInt(s2);
+		}
+
+	</script>
+</body>
+
+
+</html>
